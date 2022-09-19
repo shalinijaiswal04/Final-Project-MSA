@@ -1,0 +1,16 @@
+.body-active-bg {
+    background-color: lightskyblue;
+    cursor: pointer;
+}
+.text-link {
+    cursor: none;
+}
+
+.text-link:hover {
+    cursor: pointer;
+}
+.main-div{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

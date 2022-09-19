@@ -1,0 +1,36 @@
+<div class="container ">
+    <form (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="InputName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="InputName" name="name" aria-describedby="name" [(ngModel)]="doctorForm.doctorName">
+            <div id="name" class="form-text"></div>
+        </div>
+        <div class="mb-3">
+            <label for="InputAge" class="form-label">Age</label>
+            <input type="number" class="form-control" id="InputAge" name="InputAge" [(ngModel)]="doctorForm.doctorAge">
+        </div>
+        <div class="mb-3">
+            <label for="InputGender" class="form-label me-3">Gender </label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="InputGender" id="inlineRadioMale"
+                    value="Male" [(ngModel)]="doctorForm.doctorGender">
+                <label class="form-check-label" for="inlineRadioMale">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="InputGender" id="inlineRadioFemale"
+                    value="Female" [(ngModel)]="doctorForm.doctorGender">
+                <label class="form-check-label" for="inlineRadioFemale">Female</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="InputGender" id="inlineRadioOther"
+                    value="Other" [(ngModel)]="doctorForm.doctorGender">
+                <label class="form-check-label" for="inlineRadioOther">Other</label>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="InputAge" class="form-label">Specialist</label>
+            <input type="text" class="form-control" id="InputSpecialist" name="InputSpecialist" [(ngModel)]="doctorForm.specialist">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

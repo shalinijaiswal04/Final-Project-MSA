@@ -1,0 +1,33 @@
+<div class="container ">
+    <div class="mb-3">
+        <label for="InputId" class="form-label">Enter Patient Id</label>
+        <input type="number" class="form-control" id=" InputId" name="patientId" [(ngModel)]="id">
+    </div>
+    <button class="btn btn-primary mt-4 mb-4" (click)='toggleShowTable()'>Submit</button>
+
+    <div *ngIf="this.showTable">
+            <table *ngIf="this.patient!=null; else notFound" class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Visited Doctor name</th>
+                    <th>Date of Visit (dd-MM-YYYY)</th>
+                    <th>Prescription</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{patient.patientName}}</td>
+                        <td>{{patient.patientAge}}</td>
+                        <td>{{patient.visitedDoctor.doctorName}}</td>
+                        <td>{{patient.dateOfVisit | date:'dd-MM-YYYY'}}</td>
+                        <td>{{patient.doctorPrescription}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        <ng-template #notFound>
+            <p>No Such Patient there in database</p>
+        </ng-template>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+
+<div class="container " >
+    <div class="mb-3">
+        <p>Select Your Doctor</p>
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="selectedDoctor.doctorId" (change)="selectDoctor()">
+            <option selected disabled>Select Doctor</option>
+            <option *ngFor="let doctor of doctorList" [ngValue]="doctor.doctorId">{{doctor.doctorName}}</option>
+        </select>
+    </div>
+    
+    
+    <table *ngIf="this.showTable" class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Specialist in</th>
+            <th>No. of Patient Visited</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{selectedDoctor.doctorName}}</td>
+                <td>{{selectedDoctor.specialist}}</td>
+                <td>{{selectedDoctor.totalPatient}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

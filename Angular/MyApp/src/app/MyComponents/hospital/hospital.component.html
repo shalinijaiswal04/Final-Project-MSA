@@ -1,0 +1,21 @@
+
+<div class="row m-4">
+    <div class="col-sm" *ngFor="let tab of tabs">
+        <div class="card">
+            <div class="card-body" [ngClass]="tab.active ? 'body-active-bg':''">
+                <p class="btn-white stretched-link text-link"
+                    aria-current="page" (click)="updateContent(tab)" >{{tab.caption}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class='main-div'>
+<div class=" card m-4 p-2" style="width: 38rem; ">
+    <div class="card-header">
+        {{cardHeader}}
+      </div>
+    <div class="card-body text-left">
+        <ng-container *ngComponentOutlet="container"></ng-container>
+    </div>
+</div>
+</div>

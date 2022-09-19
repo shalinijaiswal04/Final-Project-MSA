@@ -1,0 +1,22 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary p-3">
+  <div class="container-fluid" >
+      <a class="navbar-brand" >Hospital</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse me-5 d-flex flex-row-reverse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav-pills nav-fill justify-content-center">
+              <li class="nav-item" *ngFor="let tab of tabs">
+                  <a class="nav-link text-underline-hover" [ngClass]="tab.active ? 'active':''" id="pills-home-tab" aria-current="page" href="{{tab.url}}">
+                      {{tab.Name}}
+                  </a>
+              </li>
+
+          </ul>
+      </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+
