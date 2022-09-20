@@ -4,7 +4,7 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .image{
     background-size: cover;
-    background-image: url('C:/Users/mindc1july161/Desktop/Project/Angular/MyApp/src/R.png');
+    background-image: url('src/R.png');
     
 }
 

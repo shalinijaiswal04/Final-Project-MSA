@@ -1,8 +1,6 @@
 package com.project.patient;
 
-import com.project.doctor.dao.DoctorDao;
-import com.project.doctor.service.DoctorImpl;
-import com.project.doctor.service.DoctorService;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;

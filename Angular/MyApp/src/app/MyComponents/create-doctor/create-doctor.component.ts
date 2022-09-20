@@ -25,7 +25,7 @@ export class CreateDoctorComponent implements OnInit {
     })
   }
   openSnackBar(message :string){
-    this._snackBar.open(message,"",{duration:2000,});
+    this._snackBar.open(message,"",{duration:10000,});
     
   }
 

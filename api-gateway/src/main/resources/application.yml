@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        -id: vehicleRegistration
+        uri: lb://vehicleRegistration
+        predicates:
+          - Path= /vehicle/**
+#        -id: Vehical
+#        url: lb://VEHICAL
+#        predicates:
+#          -Path= /doctor/**
+
+

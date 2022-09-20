@@ -1,6 +1,6 @@
 package com.project.patient.service;
 
-import com.project.doctor.service.DoctorService;
+
 import com.project.patient.dao.PatientDao;
 import com.project.patient.data.PatientData;
 

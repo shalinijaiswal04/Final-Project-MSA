@@ -1,6 +1,10 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ShowPatientComponent } from './show-patient.component';
+
 
 describe('ShowPatientComponent', () => {
   let component: ShowPatientComponent;
@@ -8,6 +12,8 @@ describe('ShowPatientComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports:[HttpClientModule,HttpClientTestingModule,FormsModule],
+      providers:[HttpClient],
       declarations: [ ShowPatientComponent ]
     })
     .compileComponents();
